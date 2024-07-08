@@ -1,0 +1,27 @@
+---
+
+// IMPORT ASTRO ATOMS
+import ButtonYellow from "@/atoms/atoms-nandini/buttons/yellow/index.astro"
+import ButtonWhite from "@/atoms/atoms-nandini/buttons/white/index.astro"
+import HeadingOne from "@/atoms/atoms-nandini/headings/one/index.astro"
+import ParagraphWhite from "@/atoms/atoms-nandini/paragraphs/white/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    button_text1,
+    button_text2,
+    description,
+    title,
+
+} = Astro.props
+
+---
+<section class="py-20 bg-gradient-to-r from-emerald-950 from-10% via-slate-700 via-30% to-emerald-950 to-90% text-center">
+    <HeadingOne>{ title }</HeadingOne>
+    <ParagraphWhite>{ description }</ParagraphWhite>
+    <div class="space-x-1">
+        <ButtonYellow>{ button_text1 }</ButtonYellow>
+        <ButtonWhite>{ button_text2 }</ButtonWhite>
+    </div>
+</section>
