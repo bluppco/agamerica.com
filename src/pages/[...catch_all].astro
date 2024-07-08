@@ -1,0 +1,26 @@
+---
+
+// IMPORT ASTRO LAYOUTS
+import Layout from "@/layouts/layout/index.astro"
+
+// IMPORT ASTRO COMPONENTS
+import Footer from "@/components/common/footer/index.astro"
+import HeaderBanner from "@/components/common/header-banner/index.astro"
+import HeaderPrimary from "@/components/common/header/primary/index.astro"
+import HeaderSecondary from "@/components/common/header/secondary/index.astro"
+import NotFound from "@/components/common/404/index.astro"
+
+---
+<Layout
+	description=""
+	image=""
+	title="4O4 PAGE NOT FOUND"
+>
+    <section class="md:h-screen md:max-h-screen">
+        <HeaderBanner />
+        <HeaderSecondary />
+        <HeaderPrimary />
+        <NotFound />
+    </section>
+	<Footer />
+</Layout>
