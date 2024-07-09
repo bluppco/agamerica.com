@@ -47,6 +47,7 @@ module.exports = {
 			},
 			colors: {
 
+				"brown": "#90784e",
 
 			},
 			fontFamily: {
