@@ -55,6 +55,11 @@ module.exports = {
 				"montserrat": [ "Montserrat","sans-serif" ],
 				"oswald": [ "Oswald","sans-serif" ]
 
+			},
+			boxShadow: {
+
+				'bottom-only': '0 4px 6px -3px rgba(0, 0, 0, 0.1)'
+
 			}
 
 		}
