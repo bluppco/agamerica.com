@@ -29,9 +29,9 @@ const Navbar = () => {
   const logoSrc = hoveredLink ? '/images/AgAmerica-logo-color.svg' : '/images/AgAmerica-logo.svg';
 
   return (
-    <section className={`absolute w-full ${hoveredLink ? 'bg-white shadow-lg' : ''}`} onMouseLeave={handleMouseLeaveNav}>
+    <section className={`absolute w-full ${hoveredLink ? 'bg-white' : ''}`} onMouseLeave={handleMouseLeaveNav}>
         <div className="max-w-[1280px] mx-auto px-4 xl:px-0">
-            <nav className="flex justify-between items-center bg-transparent relative z-10 py-12">
+            <nav className={`flex justify-between items-center bg-transparent relative z-10 py-12 ${hoveredLink ? 'shadow-bottom-only' : ''}`}>
                 <div className="logo">
                     <img
                         alt="logo"
@@ -39,7 +39,7 @@ const Navbar = () => {
                         src={ logoSrc }
                     />
                 </div>
-                <div className="nav-links flex gap-8">
+                <div className="nav-links flex items-center gap-8">
                     <div
                         className={`nav-link cursor-pointer py-1 ${hoveredLink === 'link1' ? 'border-b-2 border-brown' : ''}`}
                         onMouseEnter={() => handleMouseEnterNav('link1')}
@@ -58,6 +58,9 @@ const Navbar = () => {
                     >
                         <span className={`text-white text-sm font-semibold ${hoveredLink ? '!text-black' : ''}`}>INSIGHTS</span>
                     </div>
+                    <button className="text-white px-8 py-2 bg-brown">
+                        Contact Us
+                    </button>
                 </div>
             </nav>
             {hoveredLink && (
