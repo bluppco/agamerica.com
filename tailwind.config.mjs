@@ -24,6 +24,13 @@ module.exports = {
 		},
     	extend: {
 
+			backgroundImage: {
+
+				"bg-horse": "url('/images/featured-card-horse.jpg')",
+				"bg-team": "url('/images/featured-card-team.jpg')",
+				"bg-vineyard": "url('/images/featured-card-vineyard.jpg')",
+
+			},
 			keyframes: {
 
 				"accordion-down": {
