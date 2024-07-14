@@ -3,8 +3,8 @@
 // IMPORT ASTRO ATOMS
 import ButtonYellow from "@/atoms/atoms-nandini/buttons/yellow/index.astro"
 import ButtonWhite from "@/atoms/atoms-nandini/buttons/white/index.astro"
-import HeadingOne from "@/atoms/atoms-nandini/headings/one/index.astro"
-import ParagraphWhite from "@/atoms/atoms-nandini/paragraphs/white/index.astro"
+import HeadingOne5xl from "@/atoms/atoms-nandini/headings/one/5xl/index.astro"
+import ParagraphBaseWhite from "@/atoms/atoms-nandini/paragraphs/base/white/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -17,11 +17,13 @@ const {
 } = Astro.props
 
 ---
-<section class="py-20 bg-gradient-to-r from-emerald-950 from-10% via-slate-700 via-30% to-emerald-950 to-90% text-center">
-    <HeadingOne>{ title }</HeadingOne>
-    <ParagraphWhite>{ description }</ParagraphWhite>
-    <div class="space-x-1">
-        <ButtonYellow>{ button_text1 }</ButtonYellow>
-        <ButtonWhite>{ button_text2 }</ButtonWhite>
+<section class="justify-center py-20 bg-gradient-to-r from-emerald-950 from-10% via-slate-700 via-30% to-emerald-950 to-90%">
+    <div class="flex flex-wrap gap-y-10 text-center justify-center md:mx-24 lg:mx-44 xl:mx-52 2xl:mx-80">
+        <HeadingOne5xl>{ title }</HeadingOne5xl>
+        <ParagraphBaseWhite>{ description }</ParagraphBaseWhite>
+        <div class="flex gap-x-2">
+            <ButtonYellow>{ button_text1 }</ButtonYellow>
+            <ButtonWhite>{ button_text2 }</ButtonWhite>
+        </div>
     </div>
 </section>

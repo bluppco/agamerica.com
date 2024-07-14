@@ -46,9 +46,7 @@ module.exports = {
 
 			},
 			colors: {
-				"emerald-950" : "#064E3B",
-				"slate-700" : "#334155",
-				"white" : "#FFFFFF"
+				
 
 			},
 			fontFamily: {
