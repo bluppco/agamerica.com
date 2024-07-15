@@ -29,6 +29,9 @@ module.exports = {
 				"bg-horse": "url('/images/featured-card-horse.jpg')",
 				"bg-team": "url('/images/featured-card-team.jpg')",
 				"bg-vineyard": "url('/images/featured-card-vineyard.jpg')",
+				"hero-bg-one": "url('/images/hero-images/hero-1.jpeg')",
+				"hero-bg-two": "url('/images/hero-images/hero-2.png')",
+				"hero-bg-three": "url('/images/hero-images/hero-3.jpeg')",
 
 			},
 			keyframes: {
