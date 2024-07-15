@@ -2,7 +2,7 @@ import React from 'react';
 const NavigationImgCard = ({ link, title, buttonText, bgImage }) => {
     return (
         <a href={ link }>
-            <div className={`bg-no-repeat bg-cover rounded-xl p-6 flex flex-col justify-between bg-slate-800 hover:bg-none h-full w-72 group ${bgImage}`}>
+            <div className={`bg-no-repeat bg-cover rounded-xl p-6 flex flex-col justify-between bg-slate-800 hover:bg-none min-h-44 h-full min-w-72 w-full group ${bgImage}`}>
                 <span className="text-white font-semibold">{ title }</span>
                 <div className="relative">
                     <div className="flex items-center gap-1">
