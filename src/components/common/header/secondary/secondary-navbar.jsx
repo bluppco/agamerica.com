@@ -241,7 +241,7 @@ const SecondaryNavbar = () => {
                     </div>
                 </mobilenav>
             </section>
-            <div className={`fixed bg-white pt-6 pb-28 top-28 w-full h-full flex flex-col justify-between transform ${mobileNavbarActive ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out overflow-y-auto`}>
+            <div className={`z-10 fixed bg-white pt-6 pb-28 top-28 w-full h-full flex flex-col justify-between transform ${mobileNavbarActive ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out overflow-y-auto`}>
                 <div className="px-6">
                     <a href="javascript:void(0);" onClick={() => openLink('services')}>
                         <div className="py-3 border-b border-brown flex justify-between items-center">
@@ -271,7 +271,7 @@ const SecondaryNavbar = () => {
                         </div>
                     </a>
                 </div>
-                <div className="bg-gray-200 p-6 flex flex-col gap-4">
+                <div className="bg-gray-200 p-6 flex flex-col gap-4 z-10">
                     <input
                         placeholder="Search"
                         className="focus:outline-none p-2 w-full"
@@ -286,7 +286,7 @@ const SecondaryNavbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={`fixed bg-white pb-28 top-28 w-full h-full overflow-y-auto transform ${activeLink ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+            <div className={`z-10 fixed bg-white pb-28 top-28 w-full h-full overflow-y-auto transform ${activeLink ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
                 <div className="px-8 py-6">
                     {activeLink === 'services' && (
                         <div>
