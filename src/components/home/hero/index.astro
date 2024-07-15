@@ -1,3 +1,57 @@
-<section class="bg-slate-500 h-dvh">
+---
 
+// IMPORT ASTRO COMPONENTS
+import HeroCard from "@/components/home/hero/card/index.astro"
+
+// HARDCODED DATA
+const heroData = [
+    {
+        background_image: "bg-hero-bg-one",
+        button_text: "GET STARTED",
+        title_one: "FINANCING BUILT",
+        title_two: "FOR RURAL AMERICA"
+    },
+    {
+        background_image: "bg-hero-bg-two",
+        button_text: "CALCULATE LOAN PAYMENT",
+        title_one: "ESTIMATE PAYMENTS WITH",
+        title_two: "FARM LOAN CALCULATOR"
+    },
+    {
+        background_image: "bg-hero-bg-three",
+        button_text: "LEARN MORE",
+        title_one: "GOING BEYOND",
+        title_two: "TRADITIONAL FINANCE"
+    }
+]
+
+---
+
+<section class="">
+    <div class="hero_slider">
+        {heroData.map(hero => (
+            <HeroCard
+                background_image={hero.background_image}
+                button_text={hero.button_text}
+                title_one={hero.title_one}
+                title_two={hero.title_two}
+            />
+        ))}
+    </div>
 </section>
+
+<script>
+    $(document).ready(function(){
+        $('.hero_slider').slick({
+            prevArrow: false,
+            nextArrow: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: true,        
+        });
+    });
+</script>
