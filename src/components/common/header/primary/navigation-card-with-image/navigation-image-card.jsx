@@ -1,4 +1,15 @@
-import React from 'react';
+import React from 'react'
+
+// IMPORT REACT ATOMS
+import PictureContain from '@/atoms/picture/internal/contain/picture-internal-contain'
+
+// HARDCODED DATA
+const data = {
+
+    arrow_icon_source: "/icons/right-arrow.svg"
+
+}
+
 const NavigationImgCard = ({ link, title, buttonText, bgImage }) => {
     return (
         <a href={ link }>
@@ -7,16 +18,17 @@ const NavigationImgCard = ({ link, title, buttonText, bgImage }) => {
                 <div className="relative">
                     <div className="flex items-center gap-1">
                         <span className="text-white text-xs font-medium">{ buttonText }</span>
-                        <img
-                            className="object-cover size-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                            src="/icons/right-arrow.svg"
-                            alt="Right arrow"
-                        />
+                        <div className="size-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <PictureContain
+                                alternative_text="Right arrow"
+                                source={ data.arrow_icon_source }
+                            />
+                        </div>
                     </div>
                     <div className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-24"></div>
                 </div>
             </div>
         </a>
-    );
-};
-export default NavigationImgCard;
+    )
+}
+export default NavigationImgCard
