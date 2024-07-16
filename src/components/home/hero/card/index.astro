@@ -1,16 +1,17 @@
 ---
 
 // IMPORT ASTRO LAYOUTS
-import Container from "@/layouts/container/index.astro"
+import Container from "@/layouts/container-shiva/index.astro"
 
 // IMPORT ASTRO ATOMS
 import ButtonHoverWhite from "@/atoms/atoms-shiva/button/hover-white/index.astro"
-import HeadingOnewhite from "@/atoms/atoms-shiva/headings/one/seven-xl/white/index.astro"
+import HeadingOnewhite from "@/atoms/atoms-shiva/headings/one/seven-xl/semibold/white/index.astro"
 
 // GET ASTRO PROPS
 const {
 
     background_image,
+    button_link,
     button_text,
     title_one,
     title_two,
@@ -26,9 +27,9 @@ const {
                 <HeadingOnewhite>{ title_one }</HeadingOnewhite>
                 <HeadingOnewhite>{ title_two }</HeadingOnewhite>
             </div>
-            <div>
+            <a href={ button_link }>
                 <ButtonHoverWhite>{ button_text }</ButtonHoverWhite>
-            </div>
+            </a>
         </div>
     </Container>
 </section>
