@@ -24,6 +24,16 @@ module.exports = {
 		},
     	extend: {
 
+			backgroundImage: {
+
+				"bg-horse": "url('/images/featured-card-horse.jpg')",
+				"bg-team": "url('/images/featured-card-team.jpg')",
+				"bg-vineyard": "url('/images/featured-card-vineyard.jpg')",
+				"hero-bg-one": "url('/images/hero-images/hero-1.jpeg')",
+				"hero-bg-two": "url('/images/hero-images/hero-2.png')",
+				"hero-bg-three": "url('/images/hero-images/hero-3.jpeg')",
+
+			},
 			keyframes: {
 
 				"accordion-down": {
@@ -46,13 +56,19 @@ module.exports = {
 
 			},
 			colors: {
-				
+
+				"brown": "#90784e",
 
 			},
 			fontFamily: {
 
 				"montserrat": [ "Montserrat","sans-serif" ],
 				"oswald": [ "Oswald","sans-serif" ]
+
+			},
+			boxShadow: {
+
+				'bottom-only': '0 4px 6px -3px rgba(0, 0, 0, 0.1)'
 
 			}
 
