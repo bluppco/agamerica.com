@@ -1,0 +1,118 @@
+---
+
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORT ASTRO ATOMS
+import HeadingThreexlBoldWhite from "@/atoms/atoms-nandini/headings/three/xl/bold/white/index.astro"
+import HeadingTwo2xlCenterWhite from "@/atoms/atoms-nandini/headings/two/2xl/center/white/index.astro"
+import ParagraphExtrasmallUppercaseCenterYellow from "@/atoms/atoms-nandini/paragraphs/xs/uppercase/center/yellow/index.astro"
+import ParagraphLargeWhite from "@/atoms/atoms-nandini/paragraphs/lg/white/index.astro"
+import PictureInternal from "@/atoms/picture/internal/index.astro"
+
+// ROW1 ARRAY
+const row1 =[
+
+    {
+        description:"Tailored, fast land financing solutions for when you need it most.",
+        link:"/icons/flexible.svg",
+        title:"Fast, Flexible Financing",
+    },
+    {
+        description:"Ag financing and advisory services for every stage of your farm operation.",
+        link:"/icons/shield.svg",
+        title:"Comprehensive Financial Platform",
+    },
+
+]
+
+
+// ROW2 ARRAY
+const row2 =[
+
+    {
+        description:"We offer a team rooted in relationships that understands the ups and downs of agriculture.",
+        link:"/icons/opposite.svg",
+        title:"Financial & Agricultural Expertise",
+    },
+    {
+        description:"Bridging the gap between financial markets and Rural America to provide unique financing options.",
+        link:"/icons/bank.svg",
+        title:"Unparalleled Access to Capital",
+    },
+
+]
+
+// HARDCODED DATA
+const data = {
+
+    sub_title:"Your Trusted Partner",
+    title: "The AgAmerica Difference",
+
+}
+
+---
+<section class="py-10 bg-gradient-to-r from-emerald-950 from-10% via-slate-700 via-30% to-emerald-950 to-90%">
+    <Container>
+        <div class="space-y-10">
+            <div class="space-y-5">
+                <ParagraphExtrasmallUppercaseCenterYellow>{ data.sub_title }</ParagraphExtrasmallUppercaseCenterYellow>
+                <HeadingTwo2xlCenterWhite>{ data.title }</HeadingTwo2xlCenterWhite>
+            </div>
+            <div class="grid grid-rows-2 lg:grid-rows-none lg:flex lg:justify-between gap-10 mx-10">
+                <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-2 gap-10">
+                    {
+
+                        row1.map( ( item ) =>{ 
+
+                            return ( 
+
+                            <div class="border-2 rounded-lg space-y-5 p-5 md:px-10 md:pr-20 lg:pr-10 py-10">
+                                <div class="size-8">
+                                    <PictureInternal 
+                                        alternative_text={ item.link }
+                                        source={ item.link }
+                                    />
+                                </div>
+                                <div class="space-y-5">
+                                    <HeadingThreexlBoldWhite>{ item.title }</HeadingThreexlBoldWhite>
+                                    <ParagraphLargeWhite>{ item.description }</ParagraphLargeWhite>
+                                </div>
+                            </div>
+
+                            )
+
+                        }) 
+
+                    }
+                </div>
+                <div class="grid grid-rows-2 sm:grid-rows-none sm:grid-cols-2 gap-10">
+                    {
+
+                        row2.map( ( item ) =>{ 
+
+                            return ( 
+
+                            <div class="border-2 rounded-lg space-y-5 p-5 md:px-10 md:pr-20 lg:pr-10 py-10">
+                                <div class="size-8">
+                                    <PictureInternal 
+                                        alternative_text={ item.link }
+                                        source={ item.link }
+                                    />
+                                </div>
+                                <div class="space-y-5">
+                                    <HeadingThreexlBoldWhite>{ item.title }</HeadingThreexlBoldWhite>
+                                    <ParagraphLargeWhite>{ item.description }</ParagraphLargeWhite>
+                                </div>
+                            </div>
+
+                            )
+
+                        }) 
+
+                    }
+                </div>
+            </div>
+        </div>
+    </Container>
+</section>
